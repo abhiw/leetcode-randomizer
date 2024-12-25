@@ -1,0 +1,171 @@
+body {
+  width: 350px;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 10px 0;
+  color: #34495e;
+  font-size: 16px;
+}
+
+.config-section,
+.problem-section {
+  background: #f7f9fc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-select,
+.timer-config {
+  margin: 10px 0;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.timer-config input {
+  width: 60px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.timer {
+  font-size: 24px;
+  margin: 15px 0;
+  text-align: center;
+  font-family: monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+#problemTitle {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#problemTitle a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#problemTitle a:hover {
+  text-decoration: underline;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#resetTimer {
+  background: #e74c3c;
+}
+
+#resetTimer:hover {
+  background: #c0392b;
+}
+.login-prompt {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+}
+
+.login-prompt button {
+  margin-top: 10px;
+  background: #dc3545;
+}
+
+.login-prompt button:hover {
+  background: #c82333;
+}
+/* Add to styles.css */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loadingState {
+  text-align: center;
+  padding: 20px;
+}
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-family: monospace;
+}
+.timer.active {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { background-color: #f8f9fa; }
+  50% { background-color: #e9ecef; }
+  100% { background-color: #f8f9fa; }
+}
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
