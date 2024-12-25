@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Problem Randomizer",
+  "version": "1.0",
+  "description": "Randomly selects LeetCode problems with a timer",
+  "permissions": ["storage", "alarms", "notifications", "activeTab", "tabs"],
+  "host_permissions": ["https://leetcode.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "assets/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "assets/icon128.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://leetcode.com/problems/*"],
+    "js": ["contentScript.js"],
+    "css": ["contentStyle.css"]
+  }]
+}
